@@ -1,4 +1,3 @@
-USE PROYECTO
 
 CREATE TABLE Jugador(
 id_jugador INT NOT NULL,
