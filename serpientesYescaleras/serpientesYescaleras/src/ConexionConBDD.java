@@ -1,13 +1,16 @@
 
 import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 public class ConexionConBDD {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.ClassNotFoundException
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         Connection conexion = null;
         Statement sentencia = null;
         try{
@@ -20,6 +23,8 @@ public class ConexionConBDD {
         conexion = DriverManager.getConnection(url,"sa","12345678");
         
         
+        } catch (SQLException ex) {
+            Logger.getLogger(ConexionConBDD.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
